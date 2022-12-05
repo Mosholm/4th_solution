@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body class="font-Source text-defaultTiny text-baseBlack place-content-center">
+
+  <!--nav bar start-->
+  <div class="h-10 w-full bg-baseGreyLighter px-5 hidden md:block">
+    <div class="flex h-full justify-end">
+      <p
+        class=" h-full py-2 uppercase px-6 text-default cursor-pointer text-basePrimary font-SourceBold bg-baseWhite hover:bg-baseGreyLighter">
+        Privat</p>
+      <p class="h-full py-2 uppercase px-6 text-default cursor-pointer">Erhverv</p>
+    </div>
+  </div>
+
+  <nav class="bg-baseWhite border-b border-b-baseGreyLighter py-4">
+    <div class="container flex flex-wrap justify-between px-4">
+      <a href="https://tryg.dk/" class="flex items-center">
+        <img src="assets/logo.png" class="h-8 md:h-12" alt="Tryg Logo" />
+      </a>
+      <div class="flex md:order-2">
+        <!-- <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class=" bg-baseErrorRed md:hidden text-baseBlack dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1" >
+        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+        <span class="sr-only">Search</span>
+      </button> -->
+        <div class="relative hidden md:block self-center">
+
+          <!-- <div class="">
+          <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+          <span class="sr-only">Search icon</span>
+        </div> -->
+          <input type="text" id="search-navbar"
+            class="
+         border-baseGreyDarker text-defaultTiny hover:to-baseBlack hover:border-baseBlack focus:ring-baseBlack focus:ring-offset-2 focus:border-baseBlack block w-full enabled:text-baseBlack
+        p-2 pl-10 text-baseGreyLight border  bg-baseGreyLightest focus:border-basering-baseGreyDarker  place-content-center" placeholder="Search...">
+        </div>
+        <button data-collapse-toggle="navbar-search" type="button"
+          class="inline-flex items-center p-2 text-defaultTiny text-baseBlack md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="navbar-search" aria-expanded="false">
+          <span class="sr-only">Open menu</span>
+          <svg class="w-8 h-8" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="items-center  justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+        <!-- <div class="relative mt-3 md:hidden">
+          <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <svg class="w-5 h-5 text-baseBlack" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+          </div>
+          <input type="text" id="search-navbar" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+        </div> -->
+        <ul
+          class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-baseWhite bg-baseBlack md:bg-transparent md:text-basePrimary text-defaultLarge md:p-0 "
+              aria-current="page">Forsikringer</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-baseGreyDarkest hover:bg-baseGreyLighter md:text-baseBlack md:text-defaultLarge md:hover:bg-transparent md:hover:text-basePrimary md:p-0 ">About</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-baseGreyDarkest hover:bg-baseGreyLighter md:text-baseBlack md:text-defaultLarge md:hover:bg-transparent md:hover:text-basePrimary md:p-0 ">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- nav bar end-->
+
+
+
+
+
+
+  <!-- Footer start -->
+
+  <footer class="bg-baseGreyLighter">
+
+    <div class="flex flex-wrap justify-around px-4 md:px-28">
+      <div class="grow">
+        <h1 class="text-defaultLarge pt-8 mb-4">Fandt du ikke, hvad du søgte?</h1>
+
+        <div class="grid grid-cols-2 gap-8 pb-8 max-w-xl">
+
+          <div>
+            <h2 class="mb-4 text-defaultLarge font-SourceBold text-baseBlack">Populære forsikringer</h2>
+            <ul class="text-baseBlack text-default">
+              <li class="mb-2">
+                <a href="#" class=" hover:text-basePrimary">Bilforsikring</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Rejseforsikring</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Indboforsikring</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Hundeforsikring</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Børneforsikring</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Ejerskifteforsikring</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Husforsikring</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Fritidshusforsikring</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Ulykkeforsikring</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-4 text-defaultLarge font-SourceBold text-baseBlack">Kundeservice</h2>
+            <ul class="text-baseBlack text-default">
+              <li class="mb-2">
+                <a href="#" class=" hover:text-basePrimary">Gode råd</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Om Coronavirus</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Vejhjælp</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Skader</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Ret dine forsikringer</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Før du rejser</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-4 text-defaultLarge font-SourceBold text-baseBlack">Om Tryg</h2>
+            <ul class="text-baseBlack text-default">
+              <li class="mb-2">
+                <a href="#" class=" hover:text-basePrimary">Organisationen</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Tryghed i Danmark</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Job og karriere</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Samfundsansvar</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Presse</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Partneraftaler</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Tryg Affinity</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Whistleblowerordning</a>
+              </li>
+
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-4 text-defaultLarge font-SourceBold text-baseBlack">Værd at vide</h2>
+            <ul class="text-baseBlack text-default">
+              <li class="mb-2">
+                <a href="#" class=" hover:text-basePrimary">Få bonus</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Tryg Plus-fordele</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Rabataftaler</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Det med småt</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Gebyrer og afgifter</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Klagemuligheder</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Pension i Tryg</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Gavekort</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-basePrimary">Tryg Forsikring - Rapport fra finanstilsynet</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="grow flex flex-col items-center pb-8">
+        <h1 class="text-defaultLarge pt-8 mb-4">Har du brug for hjælp?</h1>
+        <p class="mb-2 text-default">Vi står altid klar til at hjælpe.</p>
+        <button
+          class="bg-basePrimary text-baseWhite font-Source text-default h-10 hover:bg-basePrimaryVariant w-full md:w-48">Kontakt
+          os</button>
+      </div>
+    </div>
+
+    <div
+      class="py-6 px-4 bg-baseWhite text-default text-baseGreyDarkest dark:text-gray-300 flex flex-col md:flex-row gap-6">
+      <span class="flex-1">
+        Tryg Forsikring A/S · Klausdalsbrovej 601, 2750 Ballerup · Cvr 24260666
+        Tryg er tilsluttet <a href="http://www.skadesgarantifonden.dk/" class="hover:text-baseBlack">Garantifonden for
+          skadesforsikringsselskaber</a>
+      </span>
+
+      <ul class="flex-1 flex flex-wrap gap-2">
+        <li class="hover:text-baseBlack">Persondata- og cookiepolitik</li>
+        <li class="hover:text-baseBlack">Responsible disclosure</li>
+        <li class="hover:text-baseBlack">Generalforsamling 2022</li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Footer end -->
+
+  <script type="module" src="./main.js"></script>
+  <script src="../path/to/flowbite/dist/flowbite.js"></script>
+
+</body>
+
+</html>

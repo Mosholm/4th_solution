@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+@font-face {
+    font-family: 'Source Sans Default';
+    src: url('font/Source_Sans_Pro/SourceSansPro-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Source Sans Default Bold';
+    src: url('font/Source_Sans_Pro/SourceSansPro-Bold.ttf');
+}
+
+}

@@ -13,14 +13,34 @@
     src: url('font/Source_Sans_Pro/SourceSansPro-Bold.ttf');
 }
 
-button{
+@font-face { 
+    font-family: 'header'; 
+src: 
+}
+
+
+
+.trygButton{
     background-color: #dc0000; /* Green */
     border: none;
     color: white;
-    padding: 15px 32px;
+    width: 300px;
+    height: 48px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    font-size: 16px;
+
+    background: linear-gradient(to right, #a22015 50%, #dc0000 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .2s ease-out;
+}
+
+.trygButton:hover{
+    background-position: left bottom;
+    background-color: #a22015;
+   
 }
 
 }

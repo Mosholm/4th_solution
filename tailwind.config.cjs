@@ -25,13 +25,15 @@ colors:{
 
 fontSize:{
   default:['16px',{lineHeight:'25px'}],
-  defaultLarge: ['18px',{lineHeight:'25px'}],
   defaultTiny:['14px',{lineHeight:'20px'}],
+  defaultLarge: ['18px',{lineHeight:'25px'}],
+  defaultHeader:['35px',{lineHeight:'30px'}]
 },
 
 fontFamily: {
 Source:'Source Sans Default, snas-serif',
 SourceBold:'Source Sans Default Bold, snas-serif',
+header:'header, sans-serif',
 },
 
     extend: {

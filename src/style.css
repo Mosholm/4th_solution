@@ -13,4 +13,14 @@
     src: url('font/Source_Sans_Pro/SourceSansPro-Bold.ttf');
 }
 
+button{
+    background-color: #dc0000; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
 }

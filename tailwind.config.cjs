@@ -27,13 +27,15 @@ fontSize:{
   default:['16px',{lineHeight:'25px'}],
   defaultTiny:['14px',{lineHeight:'20px'}],
   defaultLarge: ['18px',{lineHeight:'25px'}],
-  defaultHeader:['35px',{lineHeight:'30px'}]
+  Header: ['35px',{lineHeight:'44px'}],
+  XLtHeader:['65px',{lineHeight:'70px'}]
 },
 
 fontFamily: {
 Source:'Source Sans Default, snas-serif',
 SourceBold:'Source Sans Default Bold, snas-serif',
-header:'header, sans-serif',
+DisplayBold:'Sans Default Bold, sans-serif',
+Display:'Sans Default, sans-serif'
 },
 
     extend: {

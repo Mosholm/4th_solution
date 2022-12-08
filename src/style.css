@@ -3,28 +3,29 @@
 @tailwind utilities;
 
 @layer base {
-@font-face {
-    font-family: 'Source Sans Default';
-    src: url('font/Source_Sans_Pro/SourceSansPro-Regular.ttf');
-}
+  @font-face {
+    font-family: "Source Sans Default";
+    src: url("font/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+  }
 
-@font-face {
-    font-family: 'Source Sans Default Bold';
-    src: url('font/Source_Sans_Pro/SourceSansPro-Bold.ttf');
-}
+  @font-face {
+    font-family: "Source Sans Default Bold";
+    src: url("font/Source_Sans_Pro/SourceSansPro-Bold.ttf");
+  }
+  @font-face {
+    font-family: "Sans Default Bold";
+    src: url("font/27Sans/27Sans-Bold.ttf");
+  }
 
-@font-face { 
-    font-family: 'header'; 
-src: 
-}
+  @font-face {
+    font-family: "Sans Default";
+    src: url("font/27Sans/27Sans-Light.ttf");
+  }
 
-
-
-.trygButton{
+  .trygButton {
     background-color: #dc0000; /* Green */
     border: none;
     color: white;
-    width: 300px;
     height: 48px;
     text-align: center;
     text-decoration: none;
@@ -34,13 +35,11 @@ src:
     background: linear-gradient(to right, #a22015 50%, #dc0000 50%);
     background-size: 200% 100%;
     background-position: right bottom;
-    transition: all .2s ease-out;
-}
+    transition: all 0.2s ease-out;
+  }
 
-.trygButton:hover{
+  .trygButton:hover {
     background-position: left bottom;
     background-color: #a22015;
-   
-}
-
+  }
 }

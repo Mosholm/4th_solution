@@ -7,3 +7,5 @@ function first() {
   document.getElementById("first").classList = "hidden";
   document.getElementById("second").classList = "block";
 }
+ 
+

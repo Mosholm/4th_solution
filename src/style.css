@@ -22,6 +22,8 @@
     src: url("font/27Sans/27Sans-Light.ttf");
   }
 
+
+
   .trygButton {
     background-color: #dc0000; /* Green */
     border: none;
@@ -42,4 +44,7 @@
     background-position: left bottom;
     background-color: #a22015;
   }
+
+/* Number input */
+
 }

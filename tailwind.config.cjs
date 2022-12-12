@@ -39,7 +39,8 @@ Display:'Sans Default, sans-serif'
 },
 
     extend: {
-
+      backgroundColor: ['checked'],
+      borderColor: ['checked'],
     },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("daisyui"), require('flowbite/plugin')],

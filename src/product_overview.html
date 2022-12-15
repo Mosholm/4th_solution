@@ -8,7 +8,7 @@
   <title>Beregn din pris på Indbo</title>
 </head>
 
-<body class="font-Source text-defaultTiny text-baseBlack place-content-center">
+<body class="font-Source text-defaultTiny text-baseBlack">
 
   <!--nav bar start-->
   <div class="h-10 w-full bg-baseGreyLighter px-5 hidden md:block">
@@ -96,35 +96,70 @@
 
   <!-- nav bar end-->
 
-  <div class="justify-center flex flex-col bg-baseGreyLightest py-12 px-4 w-full md:w-1/4">
-    <h1 class="font-Display text-Header text-center">Her er vores anbefaling til din nye forsikring</h1>
+  <div class="flex justify-between mx-4 py-2 border-b-2  md:justify-center md:gap-4 ">
+    <p>Aktiver hjælpetekst</p>
+    <label for="Toggle1" class="inline-flex items-center space-x-4 cursor-pointer">
+      <span class="relative">
+        <input id="Toggle1" type="checkbox" class="hidden peer">
+        <div class="w-10 h-6 rounded-full shadow-inner bg-baseGreyLight peer-checked:bg-baseGreyDarker"></div>
+        <div
+          class="absolute inset-y-0 left-0 w-4 h-4 m-1 bg-baseInfoBlue rounded-full shadow peer-checked:right-0 peer-checked:left-auto">
+        </div>
+      </span>
+    </label>
 
-    <div class="flex  pt-4 pl-10 pb-8 border-b-2 border-baseGreyLight">
-      <div class="inline-flex">
-        <p class="text-defaultTiny">Basis Indbo</p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
-      </div>
+  </div>
+
+
+
+
+  <div class="justify-center flex flex-col bg-baseWhite py-6 px-4 w-full md:px-96">
+    <h1 class="font-Display text-Header text-center">Her er <span class="font-DisplayBold">vores anbefaling</span> til
+      din nye forsikring</h1>
+
+    <div class="flex justify-center pt-4 pl-10 pb-8 border-b-2 border-baseGreyLight">
       <p class="text-XLtHeader font-SourceBold place-self-end leading-10">77</p>
       <p class="place-self-end">Kr/Mrd</p>
 
     </div>
 
-    <a href="#" class="trygButton w-1/3 m-4 pt-3 inline-flex justify-center self-end">
-      <p>Vælg</p>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="5" y1="12" x2="19" y2="12"></line>
-        <polyline points="12 5 19 12 12 19"></polyline>
-      </svg>
-    </a>
+    <div class="bg-baseGreyLightest my-4 ">
+      <div class="text-center text-baseGreyDark my-4">
+        <ul class="flex w-full place-content-center gap-4">
 
+          <li class="mr-2 border-b-2 pb-1 border-basePrimary">
+            <a href="#" class="inline-block text-basePrimary active " aria-current="page">Basis</a>
+          </li>
+          <li class="mr-2">
+            <a href="#"
+              class="inline-block border-b-2 pb-1 border-transparent hover:text-gray-600 hover:border-gray-300">Udviddet</a>
+          </li>
+          <li class="mr-2">
+            <a href="#"
+              class="inline-block border-b-2 pb-1 border-transparent hover:text-gray-600 hover:border-gray-300">Super</a>
+          </li>
+        </ul>
+      </div>
 
+      <div>
+        <ul class="text-baseGreyDarkest font-Source text-defaultTiny">
+          <li class="mb-1 text-center ">Brand, ansvar og retshjælp</li>
+          <li class="mb-1 text-center text-defaultTiny">Tyveri og hærværk</li>
+          <li class="mb-1 text-center text-defaultTiny">Psykologisk krisehjælp</li>
+          <li class="mb-1 text-center text-defaultTiny">Vand- og vejrskade</li>
+        </ul>
 
-    <ul class="space-y-2 pr-4">
-      <p class="text-baseGreyDarker underline">Tilvalgsdækninger</p>
+        <ul class="text-baseGreyDarker font-Source text-defaultTiny pt-4 mb-4">
+          <li class="mb-1 text-center text-baseGreyDarkest underline ">Forsikringen dækker</li>
+          <li class="mb-1 text-center text-defaultTiny">Dig og dine ting</li>
+          <li class="mb-1 text-center text-defaultTiny">Din roomie og din roomies ting</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <ul class="space-y-2 pr-2 border-b-2 pb-4">
+      <p class="text-baseGreyDarkest">Vælg ekstra dækning</p>
 
       <li class="flex hover:underline justify-between">
         <div class="inline-flex">
@@ -134,15 +169,18 @@
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </div>
-        <label for="Toggle1" class="inline-flex items-center space-x-4 cursor-pointer">
-          <span class="relative">
-            <input id="Toggle1" type="checkbox" class="hidden peer">
-            <div class="w-10 h-6 rounded-full shadow-inner bg-baseGreyLight peer-checked:bg-baseGreyDarker"></div>
-            <div
-              class="absolute inset-y-0 left-0 w-4 h-4 m-1 bg-basePrimary rounded-full shadow peer-checked:right-0 peer-checked:left-auto">
-            </div>
-          </span>
-        </label>
+        <div class="inline-flex gap-4">
+          <p class="text-defaultTiny text-baseGreyDarker">5kr/mrd</p>
+          <label for="Toggle1" class="inline-flex items-center space-x-4 cursor-pointer">
+            <span class="relative">
+              <input id="Toggle1" type="checkbox" class="hidden peer">
+              <div class="w-10 h-6 rounded-full shadow-inner bg-baseGreyLight peer-checked:bg-baseGreyDarker"></div>
+              <div
+                class="absolute inset-y-0 left-0 w-4 h-4 m-1 bg-basePrimary rounded-full shadow peer-checked:right-0 peer-checked:left-auto">
+              </div>
+            </span>
+          </label>
+        </div>
       </li>
 
       <li class="flex hover:underline justify-between">
@@ -153,49 +191,65 @@
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </div>
-        <label for="Toggle1" class="inline-flex items-center space-x-4 cursor-pointer">
-          <span class="relative">
-            <input id="Toggle1" type="checkbox" class="hidden  peer">
-            <div class="w-10 h-6 rounded-full shadow-inner bg-baseGreyLight  peer-checked:dark:bg-violet-400"></div>
-            <div
-              class="absolute inset-y-0 left-0 w-4 h-4 m-1 bg-basePrimary rounded-full shadow peer-checked:right-0 peer-checked:left-auto">
-            </div>
-          </span>
-        </label>
+        <div class="inline-flex gap-4">
+          <p class="text-defaultTiny text-baseGreyDarker">15kr/mrd</p>
+          <label for="Toggle1" class="inline-flex items-center space-x-4 cursor-pointer">
+            <span class="relative">
+              <input id="Toggle1" type="checkbox" class="hidden  peer">
+              <div class="w-10 h-6 rounded-full shadow-inner bg-baseGreyLight  peer-checked:dark:bg-violet-400"></div>
+              <div
+                class="absolute inset-y-0 left-0 w-4 h-4 m-1 bg-basePrimary rounded-full shadow peer-checked:right-0 peer-checked:left-auto">
+              </div>
+            </span>
+          </label>
+        </div>
       </li>
-
     </ul>
 
+    <div class="flex pt-4 w-full justify-between">
 
-    <div class="text-center text-baseGreyDark mt-12 mb-4">
-      <ul class="flex w-full place-content-center gap-4">
-
-        <li class="mr-2 border-b-2 pb-1 border-basePrimary">
-          <a href="#" class="inline-block text-basePrimary active " aria-current="page">Basis</a>
-        </li>
-        <li class="mr-2">
-          <a href="#"
-            class="inline-block border-b-2 pb-1 border-transparent hover:text-gray-600 hover:border-gray-300">Udviddet</a>
-        </li>
-        <li class="mr-2">
-          <a href="#"
-            class="inline-block border-b-2 pb-1 border-transparent hover:text-gray-600 hover:border-gray-300">Super</a>
-        </li>
+      <ul>
+        <li class="my-2">Forudsætning for prisen er</li>
+        <li>Selvrisiko</li>
+        <li class="text-baseGreyDarker text-ellipsis mb-3">Beløbet I selv betaler når vi dækker en skade.</li>
+        <li>Indbosum</li>
+        <li class="text-baseGreyDarker text-ellipsis mb-3">Samlet værdi af jeres ting</li>
+        <li>Cykelsum</li>
+        <li class="text-baseGreyDarker text-ellipsis mb-3">Værdien af jeres dyreste cykel</li>
       </ul>
+
+
+      <ul class="pt-11">
+        <li class="flex pl-1">1.000kr <svg xmlns="http://www.w3.org/2000/svg" class="text-baseGreyDarker" width="24"
+            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg></li>
+        <li class="flex pt-7">20.000kr <svg xmlns="http://www.w3.org/2000/svg" class="text-baseGreyDarker" width="24"
+            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg></li>
+        <li class="flex pt-7 pl-2">5.000kr <svg xmlns="http://www.w3.org/2000/svg" class="text-baseGreyDarker"
+            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg></li>
+      </ul>
+
     </div>
 
-<div>
-  <ul class="text-baseGreyDarker font-Source text-defaultTiny">
-    <li class="mb-1 text-center ">Brand, ansvar og retshjælp</li>
-    <li class="mb-1 text-center text-defaultTiny">Tyveri og hærværk</li>
-    <li class="mb-1 text-center text-defaultTiny">Psykologisk krisehjælp</li>
-    <li class="mb-1 text-center text-defaultTiny">Vand- og vejrskade</li>
-  </ul>
-</div>
 
-
-
+    <a href="#" class="trygButton w-1/3 mt-8 pt-3 inline-flex justify-center self-end">
+      <p>Vælg</p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
   </div>
+
   <!-- Footer start -->
 
   <footer class="bg-baseGreyLighter">

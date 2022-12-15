@@ -95,99 +95,135 @@
   </nav>
 
   <!-- nav bar end-->
-
+  <div class="flex justify-between mx-4 py-2 border-b-2 md:justify-center md:gap-4">
+    <p>Aktiver hjælpetekst</p>
+    <label for="Toggle1" class="inline-flex items-center space-x-4 cursor-pointer">
+      <span class="relative">
+        <input id="Toggle1" type="checkbox" class="hidden peer">
+        <div class="w-10 h-6 rounded-full shadow-inner bg-baseGreyLight peer-checked:bg-baseGreyDarker"></div>
+        <div
+          class="absolute inset-y-0 left-0 w-4 h-4 m-1 bg-baseInfoBlue rounded-full shadow peer-checked:right-0 peer-checked:left-auto">
+        </div>
+      </span>
+    </label>
+  
+  </div>
 
   <!-- form section start -->
 
-  <div class="flex justify-center bg-baseGreyLightest py-12">
+  <div class="flex justify-center h-screen bg-baseGreyLightest">
 
-    <form class="bg-baseGreyLightest w-full px-4 md:w-1/4">
-      <div>
+    <form class="pt-12 w-full h-full flex flex-col gap-4 px-4 md:w-1/4">
+
+
+      <!-- Har du allerede forsikring start -->
+      <div id="first" class="block h-full pt-24">
         <h2 class="font-Display text-defaultLarge text-center pb-8">All right lad os komme igang</h2>
         <h3 class="text-default font-SourceBold text-center pb-4">Har du allerede en forsikring? </h3>
-        <div class="flex gap-4">
-          <button class="trygButton w-full">Ja</button>
-          <button class="trygButton w-full">Nej</button>
+
+        <div class="inline-flex justify-center w-full gap-4">
+          <button type="button"
+            class="trygButton inline-block px-6 py-2.5 bg-basePrimary text-baseWhite font-Source text-default hover:bg-baseBlack focus:basePrimaryVariant focus:outline-4 focus:ring-4 focus:ring-basePrimaryVariant focus:ring-offset-2 active:bg-basePrimaryVariant transition duration-150 ease-in-out">Ja</button>
+          <button type="button"
+            class="trygButton inline-block px-6 py-2.5 bg-basePrimary text-baseWhite font-Source text-default hover:bg-baseBlack focus:basePrimaryVariant focus:outline-4 focus:ring-4 focus:ring-basePrimaryVariant focus:ring-offset-2 active:bg-basePrimaryVariant transition duration-150 ease-in-out">Nej</button>
         </div>
         <p class="underline text-center mt-4">Det ved jeg ikke</p>
+
+        <a href="#" id="formBtnFirst" class="trygButton font-Source text-default w-full pt-3 mt-52">Videre</a>
       </div>
+      <!-- Har du allerede forsikring slut -->
 
-      <div>
-        <h3 class="text-default font-SourceBold text-center pb-4">Hvorfor har du ikke været forsikret før?</h3>
 
-        <div class="carousel-vertical carousel-center h-8">
-          <div class="carousel-item">
-          </div>
-          <div class="carousel-item h-full justify-center">
-            <p class="text-default text-baseGreyDarkest font-Source">Vælg</p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </div>
-          <div class="carousel-item h-full justify-center">
-            <p class="text-default text-baseGreyDarkest font-Source ">Flytter hjemmefra</p>
-          </div>
-          <div class="carousel-item h-full justify-center">
-            <p class="text-default text-baseGreyDarkest font-Source ">Flytter fra ægtefælde</p>
-          </div>
-          <div class="carousel-item h-full justify-center">
-            <p class="text-default text-baseGreyDarkest font-Source ">Andre årsager</p>
+      <!-- Hvilken adresse start -->
+      <div id="second" class="hidden h-full pt-36">
+        <div class="py-8 text-default space-y-4 sm:text-lg sm:leading-7">
+          <div class="relative top-10">
+            <input autocomplete="on" id="address" name="address" type="text"
+              class="peer placeholder-transparent h-10 w-full border-b-2 border-x-0 border-t-0 bg-baseGreyLightest border-b-baseGreyDarkest focus:outline-none focus:border-baseBlack focus:ring-0"
+              placeholder="På hvilken adresse skal forsikringen gælde" />
+            <label for="address"
+              class="absolute left-0 -top-3.5  text-baseBlack font-SourceBold bg-none peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-baseGreyDarker peer-focus:text-sm">På
+              hvilken adresse skal forsikringen gælde?</label>
           </div>
         </div>
-
+        <a href="#" id="formBtnSec" class="trygButton font-Source text-default w-full mt-60 pt-3">Videre</a>
       </div>
+      <!-- Hvilken adresse slut -->
 
 
-      <div id="first" class="block">
+      <!-- Hvilken type bolig start -->
+      <div id="third" class="hidden">
+
+        <h3 class="text-default font-SourceBold text-center mt-40 pb-4">Hvilken type bolig er det?</h3>
+        <div class="inline-flex justify-center w-full gap-4">
+          <button type="button"
+            class="trygButton inline-block px-6 py-2.5 bg-basePrimary text-baseWhite font-Source text-default hover:bg-baseBlack focus:basePrimaryVariant focus:outline-4 focus:ring-4 focus:ring-basePrimaryVariant focus:ring-offset-2 active:bg-basePrimaryVariant transition duration-150 ease-in-out">Leje</button>
+          <button type="button"
+            class="trygButton inline-block px-6 py-2.5 bg-basePrimary text-baseWhite font-Source text-default hover:bg-baseBlack focus:basePrimaryVariant focus:outline-4 focus:ring-4 focus:ring-basePrimaryVariant focus:ring-offset-2 active:bg-basePrimaryVariant transition duration-150 ease-in-out">Andel</button>
+          <button type="button"
+            class="trygButton inline-block px-6 py-2.5 bg-basePrimary text-baseWhite font-Source text-default hover:bg-baseBlack focus:basePrimaryVariant focus:outline-4 focus:ring-4 focus:ring-basePrimaryVariant focus:ring-offset-2 active:bg-basePrimaryVariant transition duration-150 ease-in-out">Ejer</button>
+        </div>
+        <a href="#" id="formBtnThird" class="trygButton font-Source text-default w-full pt-3 mt-60">Videre</a>
+      </div>
+      <!-- Hvilken type bolig slut -->
 
 
+      <!-- Alder start -->
+      <div id="fourth" class="hidden pt-36">
+        <div class="py-8 text-default space-y-4  sm:text-lg sm:leading-7">
+          <div class="relative">
+            <input autocomplete="off" id="age" name="address" type="number"
+              class="peer placeholder-transparent h-10 w-full border-b-2 border-x-0 border-t-0 bg-baseGreyLightest border-b-baseGreyDarkest focus:outline-none focus:border-baseBlack focus:ring-0"
+              placeholder="Alder" />
+            <label for="age"
+              class="absolute left-0 -top-3.5  text-baseBlack font-SourceBold bg-none peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-baseGreyDarker peer-focus:text-sm">Hvor
+              gammel er du?</label>
+          </div>
+        </div>
+        <a href="#" id="formBtnFour" class="trygButton font-Source text-default w-full mt-60 pt-3">Videre</a>
+      </div>
+      <!-- Alder slut -->
 
-        <div>
-          <div class="py-8 text-default space-y-4  sm:text-lg sm:leading-7">
-            <div class="relative">
-              <input autocomplete="on" id="address" name="address" type="text"
-                class="peer placeholder-transparent h-10 w-full border-b-2 border-x-0 border-t-0 bg-baseGreyLightest border-b-baseGreyDarkest focus:outline-none focus:border-baseBlack focus:ring-0"
-                placeholder="På hvilken adresse skal forsikringen gælde" />
-              <label for="address"
-                class="absolute left-0 -top-3.5  text-baseBlack font-SourceBold bg-none peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-baseGreyDarker peer-focus:text-sm">På
-                hvilken adresse skal forsikringen gælde?</label>
+
+      <!-- Værdi start -->
+      <div id="fift" class="hidden pt-28">
+
+        <h3 class="text-default font-SourceBold text-center pb-4">Værdien af din dyreste ting?</h3>
+<p class="text-center pb-4">Det kan for eksempel være kamera, sneakers eller designertakser.</p>
+
+        <div class="inline-flex gap-1 w-full place-content-center   px-auto">
+          <div class="carousel-vertical carousel-center h-8 w-1/4">
+
+            <div class="carousel-item h-full justify-end ">
+              <p class="text-default text-baseGreyDarkest font-Source">60.000</p>
+
             </div>
-
+            <div class="carousel-item h-full justify-end">
+              <p class="text-default text-baseGreyDarkest font-Source ">80.000</p>
+            </div>
+            <div class="carousel-item h-full justify-end">
+              <p class="text-default text-baseGreyDarkest font-Source ">100.000</p>
+            </div>
+            <div class="carousel-item h-full justify-end">
+              <p class="text-default text-baseGreyDarkest font-Source ">150.000</p>
+            </div>
           </div>
+
+          <p class="text-default text-baseGreyDarkest font-Source">Kr</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
         </div>
 
-      
-
-
+        <a href="product_overview.html" id="formBtnFift"
+          class="trygButton font-Source text-default w-full mt-64 pt-3">Videre</a>
       </div>
+      <!-- Værdi slut -->
 
 
-      <div>
-        <h3 class="text-default font-SourceBold text-center pb-4">Hvilken type bolig er det?</h3>
-
-        <fieldset class="inline-flex w-full gap-4 pb-12">
-          <div class="inline-flex items-center justify-center w-full bg-basePrimary">
-            <input type="checkbox"
-              class="bg-basePrimary border-basePrimary text-basePrimary  focus:ring-baseWhite focus:ring-offset-0 h-full">
-            <label class="p-4 w-1/2 text-baseWhite border-2 border-basePrimary bg-basePrimary">Lejer</label>
-          </div>
-          <div class="inline-flex items-center justify-center w-full bg-basePrimary">
-            <input type="checkbox"
-              class="bg-basePrimary border-basePrimary text-basePrimary  focus:ring-baseWhite focus:ring-offset-0 h-full">
-            <label class="p-4 w-1/2 text-baseWhite border-2 border-basePrimary bg-basePrimary">Andel</label>
-          </div>
-          <div class="inline-flex items-center justify-center w-full bg-basePrimary">
-            <input type="checkbox"
-              class="bg-basePrimary border-basePrimary text-basePrimary  focus:ring-baseWhite focus:ring-offset-0 h-full">
-            <label class="p-4 w-1/2 text-baseWhite border-2 border-basePrimary bg-basePrimary">Ejer</label>
-          </div>
-        </fieldset>
-
-      </div>
-
-
-      <div>
+      <!-- Hustand start -->
+      <div class="hidden">
         <h3 class="text-default font-SourceBold text-center pb-4">Hvor mange skal være dækket af Indboforsikringen?</h3>
 
         <fieldset>
@@ -226,58 +262,36 @@
         </fieldset>
 
       </div>
-
-      <div>
-        <div class="py-8 text-default space-y-4  sm:text-lg sm:leading-7">
-          <div class="relative">
-            <input autocomplete="off" id="age" name="address" type="number"
-              class="peer placeholder-transparent h-10 w-full border-b-2 border-x-0 border-t-0 bg-baseGreyLightest border-b-baseGreyDarkest focus:outline-none focus:border-baseBlack focus:ring-0"
-              placeholder="Alder" />
-            <label for="age"
-              class="absolute left-0 -top-3.5  text-baseBlack font-SourceBold bg-none peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-baseGreyDarker peer-focus:text-sm">Hvor
-              gammel er du?</label>
-          </div>
-
-        </div>
-      </div>
+      <!-- Hustand slut -->
 
 
-      <div >
-        <h3 class="text-default font-SourceBold text-center pb-4">Værdien af din dyreste ting?</h3>
-<div class="inline-flex gap-1 w-full place-content-center  px-auto">
-        <div class="carousel-vertical carousel-center h-8 w-1/4">
-         
-          <div class="carousel-item h-full justify-end ">
-            <p class="text-default text-baseGreyDarkest font-Source">60.000</p>
-          
+
+      <!-- Hvorfor ikke forsikret start -->
+      <div class="hidden">
+        <h3 class="text-default font-SourceBold text-center pb-4">Hvorfor har du ikke været forsikret før?</h3>
+        <div class="carousel-vertical carousel-center h-8">
+          <div class="carousel-item">
           </div>
-          <div class="carousel-item h-full justify-end">
-            <p class="text-default text-baseGreyDarkest font-Source ">80.000</p>
+          <div class="carousel-item h-full justify-center">
+            <p class="text-default text-baseGreyDarkest font-Source">Vælg</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
           </div>
-          <div class="carousel-item h-full justify-end">
-            <p class="text-default text-baseGreyDarkest font-Source ">100.000</p>
+          <div class="carousel-item h-full justify-center">
+            <p class="text-default text-baseGreyDarkest font-Source ">Flytter hjemmefra</p>
           </div>
-          <div class="carousel-item h-full justify-end">
-            <p class="text-default text-baseGreyDarkest font-Source ">150.000</p>
+          <div class="carousel-item h-full justify-center">
+            <p class="text-default text-baseGreyDarkest font-Source ">Flytter fra ægtefælde</p>
+          </div>
+          <div class="carousel-item h-full justify-center">
+            <p class="text-default text-baseGreyDarkest font-Source ">Andre årsager</p>
           </div>
         </div>
 
-        <p class="text-default text-baseGreyDarkest font-Source">Kr</p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 12 15 18 9"></polyline>
-      </svg>
-    </div>
       </div>
-
-
-
-      <div id="second" class="hidden"></div>
-
-
-
-      <a href="product_overview.html" class="trygButton font-Source text-default w-full pt-3">beregn min pris</a>
-
+      <!-- Hvorfor ikke forsikret slut -->
     </form>
 
 

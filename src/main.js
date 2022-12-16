@@ -35,3 +35,24 @@ function fourth() {
   document.getElementById("fourth").classList = "hidden";
   document.getElementById("fift").classList = "block";
 }
+
+
+//site manage
+
+
+const start = document.getElementById("startBtn");
+start.addEventListener("click", begynd);
+
+function begynd() {
+  document.getElementById("velkommen").classList = "hidden";
+  document.getElementById("flow").classList = "block";
+}
+
+
+const afslut = document.getElementById("afslutBtn");
+afslut.addEventListener("click", produkt);
+
+function produkt() {
+  document.getElementById("flow").classList = "hidden";
+  document.getElementById("product").classList = "block";
+}
